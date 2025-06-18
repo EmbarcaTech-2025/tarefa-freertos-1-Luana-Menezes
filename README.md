@@ -23,6 +23,20 @@ This project develops an embedded multi-task system using the BitDogLab board, p
 
 The implementation demonstrates **concurrent task execution**, **task control mechanisms**, and **real-time peripheral management** using FreeRTOS scheduling capabilities.
 
+## Reflection and Analysis
+
+**What happens if all tasks have the same priority?**
+Answer: When all tasks have equal priority (priority 1), FreeRTOS uses time-slicing to share CPU time between them. However, since your tasks spend most of their time sleeping (`vTaskDelay()`), they don't compete for CPU simultaneously. The system works fine because tasks naturally coordinate through their different sleep intervals - LED changes every 500ms, buzzer beeps every 1500ms, and buttons check every 50ms. The equal priority doesn't cause issues because tasks are rarely active at the same time. Equal priorities matter only when multiple tasks are **ready to run** simultaneously, not when they're sleeping.
+
+**Which task consumes more CPU time?**
+Answer: About the question **Which task consumes more CPU time?** 
+The button monitoring task consumes the most CPU time since it runs continuously checking button states, while LED and buzzer tasks spend most of their time in sleep state using vTaskDelay().
+
+
+**What would be the risks of using polling without priorities?**
+Answer: Without priorities, polling-based systems risk missing critical events, experiencing unpredictable response times, and potential system blocking if one task enters an infinite loop or takes too long to execute.
+
+
 ## Objective
 
 Develop practical skills in embedded multi-task programming using FreeRTOS. Upon completion, you will be able to:
