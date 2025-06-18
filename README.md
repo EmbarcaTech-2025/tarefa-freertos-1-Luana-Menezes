@@ -11,19 +11,27 @@ Campinas, June 2025
 
 ---
 
-# FreeRTOS Task Management System
+# FreeRTOS Basic Multi-Task
 
-This project implements a multi-task system using FreeRTOS on the Raspberry Pi Pico, demonstrating **task scheduling**, **task control**, and **concurrent execution** with hardware peripherals.
+This project develops an embedded multi-task system using the BitDogLab board, programmed with FreeRTOS in C language on VSCode. The system concurrently controls three board peripherals:
+
+- **RGB LED**: Cyclically alternates between red, green, and blue colors
+- **Buzzer**: Emits periodic beeps 
+- **Two Buttons**: 
+  - Button A: Suspends or resumes the LED task
+  - Button B: Suspends or resumes the buzzer task
+
+The implementation demonstrates **concurrent task execution**, **task control mechanisms**, and **real-time peripheral management** using FreeRTOS scheduling capabilities.
 
 ## Objective
 
-Create an interactive demonstration of FreeRTOS features including:
+Develop practical skills in embedded multi-task programming using FreeRTOS. Upon completion, you will be able to:
 
-- Task creation and scheduling
-- Task control mechanisms (suspend/resume)
-- Real-time task management
-- RGB LED visual feedback
-- Buzzer audio notifications
+- Create and manage multiple tasks with FreeRTOS
+- Understand scheduling and priorities in RTOS
+- Use vTaskCreate(), vTaskSuspend() and vTaskResume() commands
+- Control GPIOs with FreeRTOS
+- Organize projects in VSCode with pico-sdk and FreeRTOS
 
 ## Bill of Materials
 
@@ -41,7 +49,8 @@ Create an interactive demonstration of FreeRTOS features including:
 3. Connect your BitDogLab via USB cable and put the Pico in boot mode (press BOOTSEL button and connect cable);
 4. Copy the generated .uf2 file to the storage unit that appears (RPI-RP2);
 5. The Pico will automatically restart and begin executing the code;
-6. RGB LED will provide visual feedback and buzzer will give audio notifications based on task states.
+6. The system will run automatically: the RGB LED will cycle through colors (red, green, blue), the buzzer will beep periodically, and you can use Button A to start/stop the LED and Button B to start/stop the buzzer.
+
 
 ## System Logic
 
@@ -56,7 +65,6 @@ Create an interactive demonstration of FreeRTOS features including:
 
 - `src/main.c`: Main project code with FreeRTOS implementation;
 - `CMakeLists.txt`: Build configuration file;
-- Additional source files as per project structure.
 
 ## Features Demonstrated
 
