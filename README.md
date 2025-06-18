@@ -65,8 +65,11 @@ Create an interactive demonstration of FreeRTOS features including:
 - **Hardware Control**: RGB LED cycling and PWM buzzer control
 - **Real-time Execution**: Non-blocking task delays using vTaskDelay()
 
-## 🖼️ Project Images
+## 🖼️ Project Images/Videos
 
+- Video
+  
+https://github.com/user-attachments/assets/7e446de4-132e-489f-a87d-59754baa0d30
 
 ## 📜 Licença
 GNU GPL-3.0.
