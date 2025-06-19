@@ -1,5 +1,5 @@
 
-# FreeRTOS #1 - EmbarcaTech 2025
+# Task: FreeRTOS #1 - EmbarcaTech 2025
 
 Author: **Luana Menezes**
 
@@ -97,5 +97,5 @@ Develop practical skills in embedded multi-task programming using FreeRTOS. Upon
   
 https://github.com/user-attachments/assets/7e446de4-132e-489f-a87d-59754baa0d30
 
-## 📜 Licença
+## 📜 License
 GNU GPL-3.0.
