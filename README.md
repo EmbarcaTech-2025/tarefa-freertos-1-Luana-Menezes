@@ -58,12 +58,16 @@ Develop practical skills in embedded multi-task programming using FreeRTOS. Upon
 
 ## Setup and Execution
 
-1. Open the project in VS Code with Raspberry Pi Pico SDK environment (CMake + ARM compiler);
-2. Build the project normally (Ctrl+Shift+B in VS Code or via terminal with cmake and make);
-3. Connect your BitDogLab via USB cable and put the Pico in boot mode (press BOOTSEL button and connect cable);
-4. Copy the generated .uf2 file to the storage unit that appears (RPI-RP2);
-5. The Pico will automatically restart and begin executing the code;
-6. The system will run automatically: the RGB LED will cycle through colors (red, green, blue), the buzzer will beep periodically, and you can use Button A to start/stop the LED and Button B to start/stop the buzzer.
+1. Clone the FreeRTOS kernel with:
+   ```bash
+   git clone https://github.com/FreeRTOS/FreeRTOS-Kernel.git FreeRTOS-Kernel
+   ```
+2. Open the project in VS Code with Raspberry Pi Pico SDK environment (CMake + ARM compiler);
+3. Build the project normally (Ctrl+Shift+B in VS Code or via terminal with cmake and make);
+4. Connect your BitDogLab via USB cable and put the Pico in boot mode (press BOOTSEL button and connect cable);
+5. Copy the generated .uf2 file to the storage unit that appears (RPI-RP2);
+6. The Pico will automatically restart and begin executing the code;
+7. The system will run automatically: the RGB LED will cycle through colors (red, green, blue), the buzzer will beep periodically, and you can use Button A to start/stop the LED and Button B to start/stop the buzzer.
 
 
 ## System Logic
